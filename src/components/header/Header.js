@@ -1,5 +1,10 @@
 import React from 'react';
 import { BiMenu } from "react-icons/bi";
+import ProfileCard from './ProfileCard';
+import { BsFillPersonFill, BsFillBellFill } from 'react-icons/bs';
+import { HiHome } from 'react-icons/hi';
+import { FaSearch } from 'react-icons/fa';
+import { AiFillMessage } from 'react-icons/ai';
 
 const Header = ({ children }) => {
     return (
@@ -23,26 +28,13 @@ const Header = ({ children }) => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-64 bg-base-100 text-base-content border-r">
-                        <li>
-                            <h2 className="text-blue-500 text-2xl font-bold">Twitte Cat</h2>
-                            <div className="card card-compact bg-base-100 drop-shadow mt-5">
-                                <figure>
-                                    <div className="avatar">
-                                        <div className="w-24 rounded-full">
-                                            <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
-                                        </div>
-                                    </div>
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">MR.CAT@</h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <ProfileCard />
+                        <li className="text-xl"><p> <BsFillPersonFill />Profile</p></li>
+                        <li className="text-xl"><p> <HiHome />Home</p></li>
+                        <li className="text-xl"><p> <FaSearch />Search</p></li>
+                        <li className="text-xl"><p> <BsFillBellFill />Notification</p></li>
+                        <li className="text-xl"><p> <AiFillMessage />Message</p></li>
                     </ul>
-
                 </div>
             </div>
         </header>
