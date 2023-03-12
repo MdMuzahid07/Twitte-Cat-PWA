@@ -31,10 +31,10 @@ const Header = ({ children }) => {
                     <ul className="menu p-4 w-64 bg-base-100 text-base-content border-r">
                         <ProfileCard />
                         <li>
-                            <Link to="/profile" className="text-xl "><BsFillPersonFill />Profile</Link>
+                            <Link to="/" className="text-xl"> <HiHome />Home</Link>
                         </li>
                         <li>
-                            <Link to="/" className="text-xl"> <HiHome />Home</Link>
+                            <Link to="/profile" className="text-xl "><BsFillPersonFill />Profile</Link>
                         </li>
                         <li>
                             <Link to="/search" className="text-xl"> <FaSearch />Search</Link>

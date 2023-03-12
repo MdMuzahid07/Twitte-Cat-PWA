@@ -1,10 +1,11 @@
 import React from 'react';
+import ProfileHeader from '../components/main/profile/ProfileHeader';
 
 const Profile = () => {
     return (
-        <div>
-            <h2>profile page</h2>
-        </div>
+        <section className="overflow-y-scroll w-full px-3">
+            <ProfileHeader />
+        </section>
     );
 };
 
