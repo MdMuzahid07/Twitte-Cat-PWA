@@ -12,7 +12,7 @@ const Header = ({ children }) => {
         <header className="max-w-4xl mx-auto">
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-end">
+                <div className="drawer-content flex flex-col">
                     <div className="navbar bg-blue-500 lg:hidden">
                         <div className="flex-1">
                             <a href="3/" className="btn btn-ghost normal-case text-xl text-base-100">Tweet Cat</a>
