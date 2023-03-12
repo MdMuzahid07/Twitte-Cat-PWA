@@ -3,7 +3,7 @@ import React from 'react';
 const ProfileCard = () => {
     return (
         <li className="mb-10">
-            <h2 className="text-blue-500 text-2xl font-bold">Twitte Cat</h2>
+            <h2 className="text-blue-400 text-2xl font-bold">Twitte Cat</h2>
             <div className="card card-compact w-full bg-base-100 drop-shadow mt-5">
                 <figure>
                     <div className="avatar">

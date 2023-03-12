@@ -5,6 +5,7 @@ import { BsFillPersonFill, BsFillBellFill } from 'react-icons/bs';
 import { HiHome } from 'react-icons/hi';
 import { FaSearch } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
+import { Link, Outlet } from 'react-router-dom';
 
 const Header = ({ children }) => {
     return (
@@ -23,17 +24,28 @@ const Header = ({ children }) => {
                         </div>
                     </div>
                     {/* <!-- Page content here --> */}
-                    {children}
+                    <Outlet />
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-64 bg-base-100 text-base-content border-r">
                         <ProfileCard />
-                        <li className="text-xl"><p> <BsFillPersonFill />Profile</p></li>
-                        <li className="text-xl"><p> <HiHome />Home</p></li>
-                        <li className="text-xl"><p> <FaSearch />Search</p></li>
-                        <li className="text-xl"><p> <BsFillBellFill />Notification</p></li>
-                        <li className="text-xl"><p> <AiFillMessage />Message</p></li>
+                        <li>
+                            <Link to="/profile" className="text-xl "><BsFillPersonFill />Profile</Link>
+                        </li>
+                        <li>
+                            <Link to="/" className="text-xl"> <HiHome />Home</Link>
+                        </li>
+                        <li>
+                            <div className="text-xl"> <FaSearch />Search</div>
+                        </li>
+                        <li>
+                            <Link to="/notification" className="text-xl"> <BsFillBellFill />Notification</Link>
+                        </li>
+                        <li>
+                            <Link to="/message" className="text-xl"> <AiFillMessage />Message</Link>
+                        </li>
+                        <li className="btn border-blue-400 bg-blue-400 rounded-full mt-5 ">MeowIt</li>
                     </ul>
                 </div>
             </div>

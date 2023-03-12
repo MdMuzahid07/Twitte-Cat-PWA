@@ -16,11 +16,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 3px; /* width of the entire scrollbar */
+  width: 3px;
+  /* width of the entire scrollbar */
 }
+
 ::-webkit-scrollbar-track {
-  background: rgb(240, 240, 240); /* color of the tracking area */
+  background: rgb(240, 240, 240);
+  /* color of the tracking area */
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(98, 98, 255); /* color of the scroll thumb */
+  background-color: #60A5FA;
+  /* color of the scroll thumb */
 }
