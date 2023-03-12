@@ -1,10 +1,14 @@
 import React from 'react';
+import SearchInput from '../components/main/search/SearchInput';
 
 const Search = () => {
     return (
-        <div>
-            <h2>search</h2>
-        </div>
+        <section className="overflow-y-scroll w-full">
+            <SearchInput />
+            <div className="px-3">
+
+            </div>
+        </section>
     );
 };
 
