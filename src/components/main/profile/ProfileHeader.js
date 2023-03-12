@@ -26,7 +26,9 @@ const ProfileHeader = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="btn btn-xs btn-outline rounded-full">Edit profile</button>
+                    <div>
+                        <button className="btn btn-xs btn-outline rounded-full">Edit profile</button>
+                    </div>
                 </div>
                 <div className="rounded-0 p-5">
                     <h2 className="card-title">MR.CAT@</h2>
