@@ -1,17 +1,11 @@
 import React from 'react';
 import CardBottomNav from './CardBottomNav';
-import { BsThreeDots } from 'react-icons/bs';
+import CardThreeDot from './CardThreeDot';
 
 const TwitteCard = () => {
     return (
         <section className="border p-5 relative">
-            <div className="dropdown dropdown-end absolute right-5 top-5 z-50">
-                <label tabIndex={0} ><BsThreeDots /></label>
-                <ul tabIndex={0} className="dropdown-content menu p-2 border border-blue-400 rounded-xl bg-base-100 w-52">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                </ul>
-            </div>
+            <CardThreeDot />
             <div className="card w-full">
                 <div className="card-body p-0 mt-5 mb-10">
                     <div className="flex">
