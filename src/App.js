@@ -17,10 +17,10 @@ function App() {
         { path: "/profile", element: <Profile /> },
         { path: "/notification", element: <Notification /> },
         { path: "/message", element: <Message /> },
-        { path: "/login", element: <Login /> },
-        { path: "/signUp", element: <SignUp /> }
       ]
     },
+    { path: "/login", element: <Login /> },
+    { path: "/signUp", element: <SignUp /> }
   ]);
 
   return (
