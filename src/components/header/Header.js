@@ -37,7 +37,7 @@ const Header = ({ children }) => {
                             <Link to="/" className="text-xl"> <HiHome />Home</Link>
                         </li>
                         <li>
-                            <div className="text-xl"> <FaSearch />Search</div>
+                            <Link to="/search" className="text-xl"> <FaSearch />Search</Link>
                         </li>
                         <li>
                             <Link to="/notification" className="text-xl"> <BsFillBellFill />Notification</Link>

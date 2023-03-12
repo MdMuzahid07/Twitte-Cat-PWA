@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Profile from './pages/Profile';
 import Notification from './pages/Notification';
 import Message from './pages/Message';
+import Search from './pages/Search';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       path: "/", element: <Header />, children: [
         { path: "/", element: <Home /> },
         { path: "/profile", element: <Profile /> },
+        { path: "/search", element: <Search /> },
         { path: "/notification", element: <Notification /> },
         { path: "/message", element: <Message /> },
       ]
