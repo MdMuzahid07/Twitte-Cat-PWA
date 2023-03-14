@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 }
 
 body {
-  font-family: "roboto";
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,6 +28,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #60A5FA;
+  background-color: #60a5fa;
   /* color of the scroll thumb */
 }

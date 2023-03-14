@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Notification from './pages/Notification';
 import Message from './pages/Message';
 import Search from './pages/Search';
+import ReactToastContainer from './components/ReactToast/ReactToastContainer';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
   return (
     <main>
       <RouterProvider router={router} />
+      <ReactToastContainer />
     </main>
   );
 }

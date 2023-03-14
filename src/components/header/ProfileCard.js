@@ -4,7 +4,7 @@ const ProfileCard = () => {
     return (
         <li className="mb-10">
             <h2 className="text-blue-400 text-2xl font-bold">Twitte Cat</h2>
-            <div className="card card-compact w-full bg-base-100 drop-shadow mt-5">
+            <div className="card card-compact w-full bg-base-100 border mt-5">
                 <figure>
                     <div className="avatar">
                         <div className="w-24 rounded-full">
