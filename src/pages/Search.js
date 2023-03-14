@@ -10,6 +10,12 @@ const Search = () => {
                 <SearchResultCard />
                 <SearchResultCard />
                 <SearchResultCard />
+                <SearchResultCard />
+                <SearchResultCard />
+                <SearchResultCard />
+                <SearchResultCard />
+                <SearchResultCard />
+                <SearchResultCard />
             </div>
         </section>
     );
