@@ -9,6 +9,15 @@ const Notification = () => {
             </section>
             <div className="px-3">
                 <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
+                <NotificationCard />
             </div>
         </div>
     );

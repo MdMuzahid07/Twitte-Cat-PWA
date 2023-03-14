@@ -18,7 +18,8 @@ const SearchResultCard = () => {
                 <h2 className="card-title">MR.Cat <MdVerified style={{ color: "#60a5fa" }} /></h2>
                 <p>Ceo of OpenAI</p>
                 <div className="card-actions justify-end">
-                    <button onClick={() => toast.success("working")} className="btn btn-wide btn-sm rounded-full bg-blue-400 border-none">Follow</button>
+                    <button onClick={() => toast.success("working")} className="btn btn-sm rounded-full bg-blue-400 border-none">Message</button>
+                    <button onClick={() => toast.success("working")} className="btn btn-sm rounded-full bg-blue-400 border-none">Follow</button>
                 </div>
             </div>
         </div >
