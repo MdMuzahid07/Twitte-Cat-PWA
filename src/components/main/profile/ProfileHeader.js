@@ -2,8 +2,31 @@ import React from 'react';
 import { CiLocationOn } from 'react-icons/ci';
 import { AiOutlineLink } from 'react-icons/ai';
 import { BsCalendarCheck } from 'react-icons/bs';
+import { useSignOut } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 
 const ProfileHeader = () => {
+    const [signOut, loading, error] = useSignOut(auth);
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    const handleSignOut = async () => {
+        const success = await signOut();
+        if (success) {
+            toast.success('You are sign out');
+        }
+    };
+
     return (
         <section className="">
             <div className="card w-full bg-base-100">
@@ -28,6 +51,7 @@ const ProfileHeader = () => {
                     </div>
                     <div>
                         <button className="btn btn-xs btn-outline rounded-full">Edit profile</button>
+                        <button onClick={() => handleSignOut()} className="btn btn-xs border-0 bg-red-400 rounded-full ml-4">Sign Out</button>
                     </div>
                 </div>
                 <div className="rounded-0 p-5">

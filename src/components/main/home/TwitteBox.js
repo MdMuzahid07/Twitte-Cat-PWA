@@ -18,7 +18,7 @@ const TwitteBox = () => {
                         </div>
                     </div>
                     <div className="my-2">
-                        <input  {...register("twitteText", { required: true })} type="text" placeholder="Whats happening?" className="input w-full border-0 focus:outline-none" />
+                        <input  {...register("twitteText", { required: true })} type="text" placeholder="Whats happening?" className="input inline-block w-full border-0 focus:outline-none" />
                     </div>
                 </div>
                 <div className="flex justify-between items-center mt-3">

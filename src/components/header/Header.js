@@ -18,7 +18,7 @@ const Header = ({ children }) => {
                             <a href="3/" className="btn btn-ghost normal-case text-xl text-base-100">Tweet Cat</a>
                         </div>
                         <div className="flex-none">
-                            <label htmlFor="my-drawer-2" className="btn btn-circle drawer-button">
+                            <label htmlFor="my-drawer-2" className="btn btn-circle bg-blue-500 border-0 btn-sm drawer-button">
                                 <BiMenu style={{ fontSize: "30px" }} />
                             </label>
                         </div>

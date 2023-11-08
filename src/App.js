@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Home from './pages/Home';
 import SignUp from './authentication/SignUp';
 import Login from './authentication/Login';
 import Header from './components/header/Header';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, useNavigate } from 'react-router-dom';
 import Profile from './pages/Profile';
 import Notification from './pages/Notification';
 import Message from './pages/Message';
 import Search from './pages/Search';
 import ReactToastContainer from './components/ReactToast/ReactToastContainer';
 import ChatBox from './components/main/message/ChatBox';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 function App() {
 
@@ -28,10 +30,13 @@ function App() {
     { path: "/signUp", element: <SignUp /> }
   ]);
 
+
   return (
     <main>
-      <RouterProvider router={router} />
-      <ReactToastContainer />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+        <ReactToastContainer />
+      </Provider>
     </main>
   );
 }
