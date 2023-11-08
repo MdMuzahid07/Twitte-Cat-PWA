@@ -4,7 +4,7 @@ import CardThreeDot from './CardThreeDot';
 
 const TwitteCard = () => {
     return (
-        <section className="border p-5 relative">
+        <section className="border-b p-2 pb-5 relative mb-5">
             <CardThreeDot />
             <div className="card w-full">
                 <div className="card-body p-0 mt-5 mb-10">
