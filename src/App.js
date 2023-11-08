@@ -12,6 +12,7 @@ import ReactToastContainer from './components/ReactToast/ReactToastContainer';
 import ChatBox from './components/main/message/ChatBox';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import ProfileUpdate from './pages/ProfileUpdate';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       path: "/", element: <Header />, children: [
         { path: "/", element: <Home /> },
         { path: "/profile", element: <Profile /> },
+        { path: "/profileUpdate", element: <ProfileUpdate /> },
         { path: "/search", element: <Search /> },
         { path: "/notification", element: <Notification /> },
         { path: "/message", element: <Message /> },

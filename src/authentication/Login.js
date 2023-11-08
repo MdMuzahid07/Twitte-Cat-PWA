@@ -2,9 +2,10 @@ import React from 'react';
 import "./LoginSignUp.css";
 import { useForm } from 'react-hook-form';
 import SocialLogin from './SocialLogin';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         console.log(data)
@@ -38,7 +39,7 @@ const Login = () => {
                                         <a href="#/" className="label-text-alt link link-hover text-white">Forgot password?</a>
                                     </label>
                                     <label className="label ml-5">
-                                        <a href="#/" className="label-text-alt link link-hover text-white">New here?</a>
+                                        <button onClick={() => navigate("/signUp")} className="label-text-alt link link-hover text-white">New here?</button>
                                     </label>
                                 </div>
                             </div>

@@ -14,7 +14,7 @@ const TwitteCard = () => {
                                 <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
                             </div>
                         </div>
-                        <h2 className="card-title ml-5">Shoes!</h2>
+                        <h2 className="card-title ml-5">MR.Cat</h2>
                     </div>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>

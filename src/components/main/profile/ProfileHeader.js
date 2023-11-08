@@ -5,9 +5,11 @@ import { BsCalendarCheck } from 'react-icons/bs';
 import { useSignOut } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const ProfileHeader = () => {
     const [signOut, loading, error] = useSignOut(auth);
+    const navigate = useNavigate();
 
     if (error) {
         return (
@@ -50,7 +52,7 @@ const ProfileHeader = () => {
                         </div>
                     </div>
                     <div>
-                        <button className="btn btn-xs btn-outline rounded-full">Edit profile</button>
+                        <button onClick={() => navigate("/profileUpdate")} className="btn btn-xs btn-outline rounded-full">Edit profile</button>
                         <button onClick={() => handleSignOut()} className="btn btn-xs border-0 bg-red-400 rounded-full ml-4">Sign Out</button>
                     </div>
                 </div>
