@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 const SearchResultCard = () => {
     return (
-        <div className="card lg:card-side bg-base-100 rounded-none border mb-3">
+        <div className="card lg:card-side bg-base-100 border mb-3">
             <figure>
                 <div className="p-3">
                     <div className="avatar border border-3 border-blue-400 rounded-full online">

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProfileCard = () => {
+    const navigate = useNavigate();
+
+
     return (
         <li className="mb-10">
-            <h2 className="text-blue-400 text-2xl font-bold">Twitte Cat</h2>
-            <div className="card card-compact w-full bg-base-100 border mt-5">
+            <button onClick={() => navigate("/")} className="text-blue-400 text-2xl font-bold">Twitte Cat</button>
+            <div onClick={() => navigate("/profile")} className="card card-compact w-full bg-base-100 border mt-5">
                 <figure>
                     <div className="avatar">
                         <div className="w-24 rounded-full">

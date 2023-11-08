@@ -4,7 +4,7 @@ import { AiTwotoneHeart } from 'react-icons/ai';
 
 const NotificationCard = () => {
     return (
-        <section className="flex items-center border p-4 mb-3">
+        <section className="flex items-center border rounded-2xl p-4 mb-3">
             <div className="flex items-center">
                 <div>
                     <AiTwotoneHeart style={{ fontSize: "40px", color: "red" }} />

@@ -7,7 +7,7 @@ const MessageProfile = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="flex items-center border p-4 mb-3">
+        <section onClick={() => navigate("/chatBox")} className="flex items-center cursor-pointer rounded-2xl border p-4 mb-3">
             <div className="mr-3">
                 <div className="avatar border border-3 border-blue-400 rounded-full online">
                     <div className="w-9 rounded-full">
@@ -19,9 +19,6 @@ const MessageProfile = () => {
                 <div>
                     <h2 className="card-title">MR.Cat <MdVerified style={{ color: "#60a5fa", }} /></h2>
                     <p>Ceo of OpenAI</p>
-                </div>
-                <div>
-                    <button onClick={() => navigate("/chatBox")} className="btn btn-outline btn-circle"><BsArrowRight /></button>
                 </div>
             </div>
         </section>

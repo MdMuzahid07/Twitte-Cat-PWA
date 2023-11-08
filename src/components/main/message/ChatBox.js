@@ -4,10 +4,10 @@ import Chats from './Chats';
 
 const ChatBox = () => {
     return (
-        <div className="overflow-y-scroll w-full min-h-screen">
-            <section className="flex items-center border p-4 mb-3">
+        <div className="relative w-full">
+            <section className="flex sticky top-0 bg-white z-50 items-center border p-4 mb-3">
                 <div className="mr-3">
-                    <div className="avatar border border-3 border-blue-400 rounded-full online">
+                    <div className="avatar border-b border-3 border-blue-400 rounded-full online">
                         <div className="w-9 rounded-full">
                             <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="profile_image" />
                         </div>
@@ -18,9 +18,24 @@ const ChatBox = () => {
                     <p><small>Ceo of OpenAI</small></p>
                 </div>
             </section>
-            <div>
+            <section className="overflow-y-auto h-full px-3">
                 <Chats />
-            </div>
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+                <Chats />
+            </section>
+            <section className="fixed bg-white bottom-0 bg-white-500 p-3 w-96">
+                <div className="flex items-center gap-2">
+                    <input type="text" placeholder="Type here" className="input border-blue-500 focus:outline-none rounded-full input-bordered w-full max-w-xs" />
+                    <button className="btn bg-blue-500 border-0 rounded-full text-white">Send</button>
+                </div>
+            </section>
         </div>
     );
 };
