@@ -4,7 +4,7 @@ import TwitteCard from '../components/main/home/TwitteCard';
 
 const Profile = () => {
     return (
-        <section className="overflow-y-scroll w-full px-3">
+        <section className="max-w-4xl w-full border-r">
             <ProfileHeader />
             <TwitteCard />
         </section>

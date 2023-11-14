@@ -18,7 +18,7 @@ const Home = () => {
 
 
     return (
-        <div className="overflow-y-scroll w-full px-3">
+        <div className="max-w-4xl w-full border-r">
             <TwitteBox />
             <TwitteCard />
             <TwitteCard />

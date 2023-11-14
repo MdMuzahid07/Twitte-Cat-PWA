@@ -4,7 +4,7 @@ import SearchResultCard from '../components/main/search/SearchResultCard';
 
 const Search = () => {
     return (
-        <section className="overflow-y-scroll w-full">
+        <section className="max-w-4xl w-full border-r">
             <SearchInput />
             <div className="px-3 mt-5">
                 <SearchResultCard />

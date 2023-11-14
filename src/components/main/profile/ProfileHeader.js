@@ -51,7 +51,7 @@ const ProfileHeader = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="mr-5">
                         <button onClick={() => navigate("/profileUpdate")} className="btn btn-xs btn-outline rounded-full">Edit profile</button>
                         <button onClick={() => handleSignOut()} className="btn btn-xs border-0 bg-red-400 rounded-full ml-4">Sign Out</button>
                     </div>

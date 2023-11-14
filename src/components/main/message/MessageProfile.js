@@ -1,6 +1,5 @@
 import React from 'react';
 import { MdVerified } from 'react-icons/md';
-import { BsArrowRight } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 const MessageProfile = () => {
