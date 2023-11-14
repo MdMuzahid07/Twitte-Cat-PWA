@@ -12,7 +12,7 @@ const ProfileCard = () => {
             <div onClick={() => navigate("/profile")} className="w-full bg-base-100 border mt-5">
                 <div className="avatar online">
                     <div className="w-16 rounded-full">
-                        <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
+                        <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="" />
                     </div>
                 </div>
                 <div className="">

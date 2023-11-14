@@ -6,7 +6,7 @@ const Chats = () => {
             <div className="chat chat-start">
                 <div className="chat-image avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="profile_image" />
+                        <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="profile_image" />
                     </div>
                 </div>
                 <div className="chat-header">
@@ -21,7 +21,7 @@ const Chats = () => {
             <div className="chat chat-end">
                 <div className="chat-image avatar">
                     <div className="w-10 rounded-full">
-                        <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="profile_image" />
+                        <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="profile_image" />
                     </div>
                 </div>
                 <div className="chat-header">

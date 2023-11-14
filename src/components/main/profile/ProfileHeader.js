@@ -41,13 +41,13 @@ const ProfileHeader = () => {
                                 objectFit: "cover",
                                 objectPosition: "center"
                             }
-                        } src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="Shoes" />
+                        } src="https://img.freepik.com/free-photo/one-person-hiking-mountain-peak-admiring-milky-way-galaxy-generated-by-ai_24640-93611.jpg?t=st=1699975728~exp=1699979328~hmac=aea0aa8d71fc84c4177617768f2bf1f0258d3953a213339bdbd14a58842ed0b0&w=1060" alt="" />
                 </div>
                 <div className="flex justify-between items-center">
                     <div style={{ marginTop: "-54px" }}>
                         <div className="avatar online border border-2 rounded-full ml-5">
                             <div className="w-28 rounded-full">
-                                <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
+                                <img src="https://img.freepik.com/free-photo/full-shot-female-astronaut-wearing-spacesuit_23-2150417571.jpg?t=st=1699976271~exp=1699979871~hmac=54e925740608ef87c0360c3983e73a4280d5f402838e0968e62ffe0294f22cad&w=1380" alt="" />
                             </div>
                         </div>
                     </div>

@@ -22,7 +22,7 @@ const Header = () => {
                         <div className="flex-none">
                             <label htmlFor="my-drawer-2" className="btn btn-circle border-0 btn-sm drawer-button">
                                 <div className="w-16">
-                                    <img className="rounded-full" src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
+                                    <img className="rounded-full" src="https://img.freepik.com/free-photo/full-shot-female-astronaut-wearing-spacesuit_23-2150417571.jpg?t=st=1699976271~exp=1699979871~hmac=54e925740608ef87c0360c3983e73a4280d5f402838e0968e62ffe0294f22cad&w=1380" alt="" />
                                 </div>
                             </label>
                         </div>
@@ -50,7 +50,7 @@ const Header = () => {
                         <li>
                             <Link to="/message" className="text-xl"> <AiFillMessage />Message</Link>
                         </li>
-                        <li className="btn border-blue-400 bg-blue-400 rounded-full mt-5 w-full">MeowIt</li>
+                        <li className="btn text-white bg-blue-400 rounded-full mt-5 w-full">MeowIt</li>
                     </ul>
                 </div>
             </div>

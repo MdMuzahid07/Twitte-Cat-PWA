@@ -11,7 +11,7 @@ const TwitteCard = () => {
                     <div className="flex">
                         <div className="avatar">
                             <div className="w-14 rounded-full">
-                                <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="" />
+                                <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="" />
                             </div>
                         </div>
                         <h2 className="card-title ml-5">MR.Cat</h2>
@@ -19,7 +19,7 @@ const TwitteCard = () => {
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                 </div>
                 <figure>
-                    <img className="rounded-2xl" src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000" alt="Shoes" />
+                    <img className="rounded-2xl" src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="Shoes" />
                 </figure>
             </div>
             <CardBottomNav />
