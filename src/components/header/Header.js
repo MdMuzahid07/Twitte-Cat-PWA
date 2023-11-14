@@ -5,7 +5,7 @@ import { BsFillPersonFill, BsFillBellFill } from 'react-icons/bs';
 import { HiHome } from 'react-icons/hi';
 import { FaSearch } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -15,21 +15,24 @@ const Header = () => {
                 <div className="drawer-content flex flex-col items-center justify-center">
 
                     {/* ================== navbar top start ================> */}
-                    <div className="navbar bg-slate-50 lg:hidden sticky top-0 z-50">
+                    <div className="navbar bg-white lg:hidden sticky top-0 z-50">
                         <div className="flex-1">
-                            <a href="3/" className="btn btn-ghost normal-case text-xl text-blue-500">Tweet Cat</a>
+                            <Link to="/" className="text-xl">
+                                <button
+                                    className="btn btn-ghost normal-case text-xl text-blue-500">Tweet Cat</button>
+                            </Link>
                         </div>
                         <div className="flex-none">
                             <label htmlFor="my-drawer-2" className="btn btn-circle border-0 btn-sm drawer-button">
-                                <div className="w-16">
-                                    <img className="rounded-full" src="https://img.freepik.com/free-photo/full-shot-female-astronaut-wearing-spacesuit_23-2150417571.jpg?t=st=1699976271~exp=1699979871~hmac=54e925740608ef87c0360c3983e73a4280d5f402838e0968e62ffe0294f22cad&w=1380" alt="" />
-                                </div>
+                                <img className="max-h-14 max-w-14 rounded-full object-cover object-center" src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="" />
                             </label>
                         </div>
                     </div>
+
                     {/* ================== navbar top end ================> */}
 
                     {<Outlet />}
+
                 </div>
                 <div className="drawer-side z-50">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
@@ -53,6 +56,54 @@ const Header = () => {
                         <li className="btn text-white bg-blue-400 rounded-full mt-5 w-full">MeowIt</li>
                     </ul>
                 </div>
+            </div>
+
+
+
+
+            <div className="btm-nav md:hidden bg-base-100 border-t border-slate-50 z-40">
+                <button>
+                    <NavLink
+                        to="/"
+                        className="text-2xl"
+                        style={({ isActive, isPending, isTransitioning }) => {
+                            return {
+                                fontWeight: isActive ? "bold" : "",
+                                color: isActive ? "#60A5FA" : "black",
+                            };
+                        }}
+                    >
+                        <HiHome />
+                    </NavLink>
+                </button>
+                <button>
+                    <NavLink
+                        to="/search"
+                        className="text-2xl"
+                        style={({ isActive, isPending, isTransitioning }) => {
+                            return {
+                                fontWeight: isActive ? "bold" : "",
+                                color: isActive ? "#60A5FA" : "black",
+                            };
+                        }}
+                    >
+                        <FaSearch />
+                    </NavLink>
+                </button>
+                <button>
+                    <NavLink
+                        to="/message"
+                        className="text-2xl"
+                        style={({ isActive, isPending, isTransitioning }) => {
+                            return {
+                                fontWeight: isActive ? "bold" : "",
+                                color: isActive ? "#60A5FA" : "black",
+                            };
+                        }}
+                    >
+                        <AiFillMessage />
+                    </NavLink>
+                </button>
             </div>
         </header>
     );

@@ -9,7 +9,7 @@ const TwitteBox = () => {
     };
 
     return (
-        <header className="py-7 px-4 sticky top-0 z-20 bg-base-100">
+        <header className="py-7 px-4 lg:sticky lg:top-0 z-20 bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex items-center">
                     <div className="avatar">
