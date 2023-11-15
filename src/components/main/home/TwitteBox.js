@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsFileEarmarkImage } from 'react-icons/bs';
 import { useForm } from 'react-hook-form';
 

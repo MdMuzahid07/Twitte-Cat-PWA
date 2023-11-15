@@ -1,20 +1,44 @@
-import React from 'react'
+import { BsFileEarmarkImage } from 'react-icons/bs';
+import { useForm } from 'react-hook-form';
+
 
 const MeowITModal = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
+        console.log(data)
+    };
     return (
         <>
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             {/* <button className="btn" >open modal</button> */}
             <dialog id="meowit-modal" className="modal">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click the button below to close</p>
-                    <div className="modal-action">
-                        <form method="dialog">
-                            {/* if there is a button in form, it will close the modal */}
-                            <button className="btn btn-xs md:btn-md rounded-full bg-blue-500 px-4 text-white">Post</button>
-                        </form>
-                    </div>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="flex items-center">
+                            <div className="avatar">
+                                <div className="w-12 h-12 rounded-full">
+                                    <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="" />
+                                </div>
+                            </div>
+                            <div className="my-2">
+                                <input  {...register("twitteText", { required: true })} type="text" placeholder="Whats happening?" className="input inline-block w-full border-0 focus:outline-none" />
+                            </div>
+                        </div>
+                        <div className="flex justify-between items-center mt-3">
+                            <div>
+                                <label htmlFor="img">
+                                    <BsFileEarmarkImage />
+                                </label>
+                                <input  {...register("twitteThumbnail")} type="file" className="hidden" id="img" />
+                            </div>
+                            <div className="modal-action">
+                                <form method="dialog">
+                                    {/* if there is a button in form, it will close the modal */}
+                                    <button type="submit" className="btn btn-xs md:btn-md rounded-full bg-blue-500 px-4 text-white">Post</button>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </dialog>
         </>
