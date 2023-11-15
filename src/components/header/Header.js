@@ -53,7 +53,7 @@ const Header = () => {
                         <li>
                             <Link to="/message" className="text-xl"> <AiFillMessage />Message</Link>
                         </li>
-                        <li className="btn text-white bg-blue-400 rounded-full mt-5 w-full">MeowIt</li>
+                        <li onClick={() => document.getElementById('meowit-modal').showModal()} className="btn text-white bg-blue-400 rounded-full mt-5 w-full">MeowIt</li>
                     </ul>
                 </div>
             </div>
