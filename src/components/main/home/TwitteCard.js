@@ -4,22 +4,22 @@ import CardThreeDot from './CardThreeDot';
 
 const TwitteCard = () => {
     return (
-        <section className="border-b p-2 pb-5 relative mb-5">
+        <section className="border-b p-8 pb-5 relative mb-5">
             <CardThreeDot />
             <div className="card w-full">
                 <div className="card-body p-0 mt-5 mb-10">
                     <div className="flex">
                         <div className="avatar">
                             <div className="w-14 rounded-full">
-                                <img src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="" />
+                                <img src="https://img.freepik.com/free-vector/night-neon-megapolis-soaring-island_1441-3150.jpg?w=1380&t=st=1700332109~exp=1700332709~hmac=cf1373e3cb95950b2e83188bc98cbe935073547db806399b1b42a04f6677be6d" alt="" />
                             </div>
                         </div>
                         <h2 className="card-title ml-5">MR.Cat</h2>
                     </div>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, consectetur.</p>
                 </div>
                 <figure>
-                    <img className="rounded-2xl" src="https://img.freepik.com/free-vector/vector-illustration-cosmonaut_1441-11.jpg?w=826&t=st=1699976443~exp=1699977043~hmac=0be77eda444ec16cf3c201dbcd01789c736019d9612bb7c4a68540b732aed06b" alt="Shoes" />
+                    <img className="rounded-2xl" src="https://img.freepik.com/free-vector/night-neon-megapolis-soaring-island_1441-3150.jpg?w=1380&t=st=1700332109~exp=1700332709~hmac=cf1373e3cb95950b2e83188bc98cbe935073547db806399b1b42a04f6677be6d" alt="post_thumbnail" />
                 </figure>
             </div>
             <CardBottomNav />

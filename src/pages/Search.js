@@ -6,7 +6,7 @@ const Search = () => {
     return (
         <section className="max-w-4xl w-full border-r">
             <SearchInput />
-            <div className="px-3 mt-5">
+            <div className="px-8 mt-5">
                 <SearchResultCard />
                 <SearchResultCard />
                 <SearchResultCard />

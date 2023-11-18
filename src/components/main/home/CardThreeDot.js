@@ -1,27 +1,47 @@
-import React from 'react';
-import { BsThreeDots } from 'react-icons/bs';
-import { AiOutlineDelete, AiOutlineUserDelete } from 'react-icons/ai';
-import { MdOutlineAdminPanelSettings } from 'react-icons/md';
+import React from "react";
+import { BsThreeDots } from "react-icons/bs";
+import { AiOutlineUserDelete } from "react-icons/ai";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import { IoMdSad } from "react-icons/io";
+import { BsFillPersonXFill } from "react-icons/bs";
+import { RiFlag2Line } from "react-icons/ri";
 
 const CardThreeDot = () => {
-    return (
-        <div>
-            <div className="dropdown dropdown-end absolute right-5 top-5 z-10">
-                <label className="cursor-pointer" tabIndex={0} ><BsThreeDots /></label>
-                <ul tabIndex={0} className="dropdown-content menu p-2 border border-blue-400 rounded-xl bg-base-100 w-52">
-                    <li type="button" className="text-error font-bold">
-                        <p><AiOutlineDelete /> delete post</p>
-                    </li>
-                    <li type="button" className="text-error font-bold">
-                        <p><AiOutlineUserDelete /> delete user</p>
-                    </li>
-                    <li type="button" className="text-blue-400 font-bold">
-                        <p><MdOutlineAdminPanelSettings /> Make Admin</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+    <div className="dropdown dropdown-end absolute right-5 top-5 z-10">
+      <label
+        className="btn btn-sm btn-circle btn-ghost cursor-pointer"
+        tabIndex={0}
+      >
+        <BsThreeDots />
+      </label>
+      <ul
+        tabIndex={0}
+        className="dropdown-content menu p-0 rounded-2xl bg-base-100 border w-64"
+      >
+        <li type="button">
+          <p>
+            <IoMdSad /> Not interested
+          </p>
+        </li>
+        <li type="button">
+          <p>
+            <BsFillPersonXFill /> Unfollow
+          </p>
+        </li>
+        <li type="button">
+          <p>
+            <AiOutlineUserDelete /> Block user
+          </p>
+        </li>
+        <li type="button">
+          <p>
+            <RiFlag2Line /> Report post
+          </p>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default CardThreeDot;
