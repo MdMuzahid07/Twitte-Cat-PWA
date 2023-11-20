@@ -1,16 +1,34 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 import SocialLogin from './SocialLogin';
 import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
+import { toast } from 'react-toastify';
+import LoadingSpinner from '../components/LoadingSpinner';
+
 
 const SignUp = () => {
     const navigate = useNavigate();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = (data) => {
-        console.log(data)
-    };
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-    console.log(watch("example"));
+    if (error) {
+        toast.error(error.message)
+        return navigate("/login");
+    }
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (user) {
+        toast.success(user.user.email);
+        return navigate("/profile")
+    }
 
     return (
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-900 min-h-screen bg-black min-w-screen">
@@ -21,24 +39,25 @@ const SignUp = () => {
                             <SocialLogin />
                         </div>
                         <hr />
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <div>
+                        <div >
+                            {/* <div>
                                 <label className="label" htmlFor="name">
                                     <span className="label-text text-white">Name</span>
                                 </label>
                                 <input  {...register("name")} type="text" placeholder="name" className="input input-bordered w-full" id="name" />
-                            </div>
+                            </div> */}
                             <div>
                                 <label className="label" htmlFor="email">
                                     <span className="label-text text-white">Email</span>
                                 </label>
-                                <input  {...register("email")} type="text" placeholder="email" className="input input-bordered w-full" id="email" />
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="enter your email address" className="input input-bordered w-full" id="email" />
                             </div>
                             <div>
                                 <label className="label" htmlFor="password">
                                     <span className="label-text text-white">Password</span>
                                 </label>
-                                <input  {...register("password")} type="text" placeholder="password" className="input input-bordered w-full" id="password" />
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="enter a strong password" className="input input-bordered w-full" id="password" />
+
                                 <div className="flex">
                                     <label className="label">
                                         <a href="#/" className="label-text-alt link link-hover text-white">Forgot password?</a>
@@ -47,10 +66,11 @@ const SignUp = () => {
                                         <button onClick={() => navigate("/login")} className="label-text-alt link link-hover text-white">Already have an account?</button>
                                     </label>
                                 </div>
+
                             </div>
-                        </form>
-                        <div className="mt-6">
-                            <button type="button" className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block glass">SignUp</button>
+                            <div className="mt-6">
+                                <button onClick={() => createUserWithEmailAndPassword(email, password)} className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block glass">SignUp</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,20 +6,17 @@ import { useSignOut } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../../LoadingSpinner';
 
 const ProfileHeader = () => {
     const [signOut, loading, error] = useSignOut(auth);
     const navigate = useNavigate();
 
     if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
+        return toast.error(error.message);
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <LoadingSpinner />
     }
 
     const handleSignOut = async () => {

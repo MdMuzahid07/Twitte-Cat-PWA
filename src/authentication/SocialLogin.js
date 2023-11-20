@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const SocialLogin = () => {
 
@@ -13,7 +14,7 @@ const SocialLogin = () => {
         toast.success(`Welcome ${user?.user.displayName}`);
         navigate("/");
     } else if (loading) {
-        return toast.error("Loading");
+        return <LoadingSpinner />;
     } else if (error) {
         toast.error(error.message);
     };
