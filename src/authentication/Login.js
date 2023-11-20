@@ -1,17 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./LoginSignUp.css";
-import { useForm } from 'react-hook-form';
 import SocialLogin from './SocialLogin';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const Login = () => {
     const navigate = useNavigate();
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = (data) => {
-        console.log(data)
-    };
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
-    console.log(watch("example"));
+    if (error) {
+        toast.error(error.message)
+        return navigate("/login");
+    }
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+    if (user) {
+        return toast.success(user.user.email);
+    }
+
+
 
     return (
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-900 min-h-screen bg-black">
@@ -22,18 +40,18 @@ const Login = () => {
                             <SocialLogin />
                         </div>
                         <hr />
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <div>
                             <div>
                                 <label className="label" htmlFor="email">
                                     <span className="label-text text-white">Email</span>
                                 </label>
-                                <input  {...register("email")} type="text" placeholder="email" className="input input-bordered w-full" id="email" />
+                                <input onClick={(e) => setEmail(e.target.value)} type="email" placeholder="enter your email address" className="input input-bordered w-full" id="email" />
                             </div>
                             <div>
                                 <label className="label" htmlFor="password">
                                     <span className="label-text text-white">Password</span>
                                 </label>
-                                <input  {...register("password")} type="text" placeholder="password" className="input input-bordered w-full" id="password" />
+                                <input onClick={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="input input-bordered w-full" id="password" />
                                 <div className="flex">
                                     <label className="label">
                                         <a href="#/" className="label-text-alt link link-hover text-white">Forgot password?</a>
@@ -43,9 +61,9 @@ const Login = () => {
                                     </label>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                         <div className="mt-6">
-                            <button type="button" className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block">Login</button>
+                            <button onClick={() => signInWithEmailAndPassword(email, password)} className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block">Login</button>
                         </div>
                     </div>
                 </div>

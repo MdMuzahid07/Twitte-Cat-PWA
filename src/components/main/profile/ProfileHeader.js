@@ -23,6 +23,7 @@ const ProfileHeader = () => {
         const success = await signOut();
         if (success) {
             toast.success('You are sign out');
+            navigate("/login")
         }
     };
 
