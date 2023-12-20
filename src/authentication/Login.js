@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./LoginSignUp.css";
 import SocialLogin from './SocialLogin';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
@@ -18,17 +18,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if (error) {
-        toast.error(error.message)
+
+    if (loading && !user) {
+        return <LoadingSpinner />
+    }
+    if (!loading && !user && error) {
+        toast.error(error.message, { id: "error" });
         return navigate("/login");
     }
-    if (loading) {
-        return <LoadingSpinner />;
+    if (!loading && user && !error) {
+        toast.success(user.email, { id: "success" });
+        return navigate("/profile");
     }
-    if (user) {
-        return toast.success(user.user.email);
-    }
-
 
 
     return (
@@ -40,30 +41,38 @@ const Login = () => {
                             <SocialLogin />
                         </div>
                         <hr />
-                        <div>
+                        <div >
+                            {/* <div>
+                                <label className="label" htmlFor="name">
+                                    <span className="label-text text-white">Name</span>
+                                </label>
+                                <input  {...register("name")} type="text" placeholder="name" className="input input-bordered w-full" id="name" />
+                            </div> */}
                             <div>
                                 <label className="label" htmlFor="email">
                                     <span className="label-text text-white">Email</span>
                                 </label>
-                                <input onClick={(e) => setEmail(e.target.value)} type="email" placeholder="enter your email address" className="input input-bordered w-full" id="email" />
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="enter your email address" className="input input-bordered w-full" id="email" />
                             </div>
                             <div>
                                 <label className="label" htmlFor="password">
                                     <span className="label-text text-white">Password</span>
                                 </label>
-                                <input onClick={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="input input-bordered w-full" id="password" />
+                                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="enter a strong password" className="input input-bordered w-full" id="password" />
+
                                 <div className="flex">
                                     <label className="label">
                                         <a href="#/" className="label-text-alt link link-hover text-white">Forgot password?</a>
                                     </label>
                                     <label className="label ml-5">
-                                        <button onClick={() => navigate("/signUp")} className="label-text-alt link link-hover text-white">New here?</button>
+                                        <button onClick={() => navigate("/login")} className="label-text-alt link link-hover text-white">Already have an account?</button>
                                     </label>
                                 </div>
+
                             </div>
-                        </div>
-                        <div className="mt-6">
-                            <button onClick={() => signInWithEmailAndPassword(email, password)} className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block">Login</button>
+                            <div className="mt-6">
+                                <button onClick={() => signInWithEmailAndPassword(email, password)} className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block glass">SignUp</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import SocialLogin from './SocialLogin';
 import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 
@@ -18,17 +18,18 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
-    if (error) {
-        toast.error(error.message)
+    if (loading && !user) {
+        return <LoadingSpinner />
+    }
+    if (!loading && !user && error) {
+        toast.error(error.message, { id: "error" });
         return navigate("/login");
     }
-    if (loading) {
-        return <LoadingSpinner />;
+    if (!loading && user && !error) {
+        toast.success(user.email, { id: "success" });
+        return navigate("/profile");
     }
-    if (user) {
-        toast.success(user.user.email);
-        return navigate("/profile")
-    }
+
 
     return (
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-900 min-h-screen bg-black min-w-screen">

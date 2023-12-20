@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import router from './routes/router';
 import MeowITModal from './components/header/MeowITModal';
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Provider store={store}>
         <RouterProvider router={router} />
         <ReactToastContainer />
+        <Toaster />
         <MeowITModal />
       </Provider>
     </main>

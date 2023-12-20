@@ -4,7 +4,7 @@ import { AiOutlineLink } from 'react-icons/ai';
 import { BsCalendarCheck } from 'react-icons/bs';
 import { useSignOut } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { toast } from 'react-toastify';
+import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../LoadingSpinner';
 
