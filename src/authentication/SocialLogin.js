@@ -20,7 +20,7 @@ const SocialLogin = () => {
         navigate("/");
     }
     if (loading || gLoading) {
-        return <div className="flex justify-center">
+        return <div className="flex justify-end">
             <span className="loading loading-spinner loading-lg text-white"></span>
         </div>
     }
@@ -36,8 +36,8 @@ const SocialLogin = () => {
 
     return (
         <div>
-            <button onClick={() => signInWithGoogle()} type="button" className="btn btn-accent btn-outline font-bold btn-block rounded-full mb-3">Continue with Google</button>
-            <button onClick={() => signInWithGithub()} type="button" className="btn btn-accent btn-outline font-bold btn-block rounded-full">Continue with Github</button>
+            <button onClick={() => signInWithGoogle()} type="button" className="btn  border border-white font-bold btn-block rounded-full mb-3">Continue with Google</button>
+            <button onClick={() => signInWithGithub()} type="button" className="btn  bg-[#1F2A38] text-white border-0 font-bold btn-block hover:text-black rounded-full">Continue with Github</button>
         </div>
     );
 };

@@ -33,9 +33,9 @@ const Login = () => {
 
 
     return (
-        <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-900 min-h-screen bg-black">
+        <div className="bg-gradient-to-r bg-blue-500 min-h-screen">
             <div className="flex justify-center items-center min-h-screen  px-3 md:px-0">
-                <div className="card flex-shrink-0 w-full max-w-lg border animate__animated animate__fadeIn bg-slate-900">
+                <div className="card flex-shrink-0 w-full max-w-lg animate__animated animate__fadeIn bg-slate-900">
                     <div className="card-body">
                         <div className="mb-10">
                             <SocialLogin />
@@ -72,7 +72,7 @@ const Login = () => {
 
                             </div>
                             <div className="mt-6">
-                                <button onClick={() => signInWithEmailAndPassword(email, password)} className="btn bg-gradient-to-r from-error to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-black font-bold btn-block glass">SignUp</button>
+                                <button onClick={() => signInWithEmailAndPassword(email, password)} className="btn bg-white text-blue-500 font-bold btn-block">SignUp</button>
                             </div>
                         </div>
                     </div>
