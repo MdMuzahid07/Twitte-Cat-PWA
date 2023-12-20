@@ -40,6 +40,7 @@ const SignUp = () => {
                             <SocialLogin />
                         </div>
                         <hr />
+                        <h1 className="text-white my-3 text-2xl">Register</h1>
                         <div >
                             {/* <div>
                                 <label className="label" htmlFor="name">

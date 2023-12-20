@@ -41,6 +41,7 @@ const Login = () => {
                             <SocialLogin />
                         </div>
                         <hr />
+                        <h1 className="text-white my-3 text-2xl">Login</h1>
                         <div >
                             {/* <div>
                                 <label className="label" htmlFor="name">
@@ -65,7 +66,7 @@ const Login = () => {
                                         <a href="#/" className="label-text-alt link link-hover text-white">Forgot password?</a>
                                     </label>
                                     <label className="label ml-5">
-                                        <button onClick={() => navigate("/login")} className="label-text-alt link link-hover text-white">Already have an account?</button>
+                                        <button onClick={() => navigate("/signUp")} className="label-text-alt link link-hover text-white">New here? Register</button>
                                     </label>
                                 </div>
 
