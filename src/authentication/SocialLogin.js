@@ -20,7 +20,9 @@ const SocialLogin = () => {
         navigate("/");
     }
     if (loading || gLoading) {
-        return <LoadingSpinner />
+        return <div className="flex justify-center">
+            <span className="loading loading-spinner loading-lg text-white"></span>
+        </div>
     }
     if (error || gError) {
         if (error) {
