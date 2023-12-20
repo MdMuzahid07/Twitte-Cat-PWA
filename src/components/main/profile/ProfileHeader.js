@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../LoadingSpinner';
+import { starLink } from '../../../assets';
 
 const ProfileHeader = () => {
     const [signOut, loading, error] = useSignOut(auth);
@@ -39,7 +40,7 @@ const ProfileHeader = () => {
                                 objectFit: "cover",
                                 objectPosition: "center"
                             }
-                        } src="https://img.freepik.com/free-photo/one-person-hiking-mountain-peak-admiring-milky-way-galaxy-generated-by-ai_24640-93611.jpg?t=st=1699975728~exp=1699979328~hmac=aea0aa8d71fc84c4177617768f2bf1f0258d3953a213339bdbd14a58842ed0b0&w=1060" alt="" />
+                        } src={starLink} alt="" />
                 </div>
                 <div className="flex justify-between items-center">
                     <div style={{ marginTop: "-54px" }}>

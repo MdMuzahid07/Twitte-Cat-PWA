@@ -1,5 +1,6 @@
 import React from 'react';
 import MessageProfile from '../components/main/message/MessageProfile';
+import { rocket, rocket2, spaceX, starLink } from '../assets';
 
 const Message = () => {
     return (
@@ -8,20 +9,24 @@ const Message = () => {
                 <h2 className="text-lg md:text-xl">All Messages</h2>
             </section>
             <div className="px-8">
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
-                <MessageProfile />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={starLink} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={starLink} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={starLink} />
+                <MessageProfile img={rocket} />
+                <MessageProfile img={starLink} />
+                <MessageProfile img={rocket2} />
+                <MessageProfile img={spaceX} />
+                <MessageProfile img={starLink} />
             </div>
         </div>
     );

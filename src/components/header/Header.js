@@ -6,6 +6,7 @@ import { HiHome } from 'react-icons/hi';
 import { FaSearch } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import { starLink } from '../../assets';
 
 const Header = () => {
     return (
@@ -24,7 +25,7 @@ const Header = () => {
                         </div>
                         <div className="flex-none">
                             <label htmlFor="my-drawer-2" className="btn btn-circle border-0 btn-sm drawer-button">
-                                <img className="max-h-14 max-w-14 rounded-full object-cover object-center" src="https://img.freepik.com/free-vector/night-neon-megapolis-soaring-island_1441-3150.jpg?w=1380&t=st=1700332109~exp=1700332709~hmac=cf1373e3cb95950b2e83188bc98cbe935073547db806399b1b42a04f6677be6d" alt="" />
+                                <img className="max-h-14 max-w-14 rounded-full object-cover object-center" src={starLink} alt="" />
                             </label>
                         </div>
                     </div>

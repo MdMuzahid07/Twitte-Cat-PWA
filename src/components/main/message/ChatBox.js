@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdVerified } from 'react-icons/md';
 import Chats from './Chats';
+import { rocket, rocket2, spaceX, starLink } from '../../../assets';
 
 const ChatBox = () => {
     return (
@@ -9,7 +10,7 @@ const ChatBox = () => {
                 <div className="mr-3">
                     <div className="avatar border-b border-3 border-blue-400 rounded-full online">
                         <div className="w-9 rounded-full">
-                            <img src="https://img.freepik.com/free-vector/night-neon-megapolis-soaring-island_1441-3150.jpg?w=1380&t=st=1700332109~exp=1700332709~hmac=cf1373e3cb95950b2e83188bc98cbe935073547db806399b1b42a04f6677be6d" alt="profile_image" />
+                            <img src={starLink} alt="profile_image" />
                         </div>
                     </div>
                 </div>
@@ -19,16 +20,14 @@ const ChatBox = () => {
                 </div>
             </section>
             <section className="px-3">
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
-                <Chats />
+                <Chats img={rocket2} />
+                <Chats img={rocket} />
+                <Chats img={rocket2} />
+                <Chats img={rocket} />
+                <Chats img={rocket} />
+                <Chats img={starLink} />
+                <Chats img={rocket2} />
+                <Chats img={spaceX} />
             </section>
 
             <div className="bg-base-100 border-t z-20 bg-white-500 p-3 w-full">

@@ -4,7 +4,7 @@ import { AiTwotoneHeart } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const NotificationCard = () => {
+const NotificationCard = ({ img }) => {
     const navigate = useNavigate();
 
     return (
@@ -14,7 +14,7 @@ const NotificationCard = () => {
                     <AiTwotoneHeart style={{ fontSize: "40px", color: "red" }} />
                     <div className="avatar border border-3 border-blue-400 rounded-full online">
                         <div className="w-14 rounded-full">
-                            <img src="https://img.freepik.com/free-vector/night-neon-megapolis-soaring-island_1441-3150.jpg?w=1380&t=st=1700332109~exp=1700332709~hmac=cf1373e3cb95950b2e83188bc98cbe935073547db806399b1b42a04f6677be6d" alt="profile_image" />
+                            <img src={img} alt="profile_image" />
                         </div>
                     </div>
                 </div>
